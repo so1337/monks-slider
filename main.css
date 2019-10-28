@@ -1,0 +1,145 @@
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.non-hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#main {
+  background-image: url("./assets/images/background.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position 1s;
+  font-family: 'Klavika';
+}
+
+
+#main .section .left-text {
+  left: 140px;
+}
+
+#main .section .right-text {
+  right: 140px;
+}
+
+#main .logo {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+#main .controls {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 40%;
+  z-index: 1;
+}
+
+#main .controls>div {
+  cursor: pointer;
+}
+
+#main .controls .prev-arrow-button {
+  transform: rotate(180deg);
+}
+
+#main .section {
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+#main .section>span {
+  display: flex;
+  height: 100%;
+  position: fixed;
+  align-items: center;
+  color: white;
+  font-size: 64px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#main #section-0 .text {
+  color: white;
+  font-size: 64px;
+  text-decoration: underline;
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  align-items: flex-start;
+}
+
+#main #section-0 .secondary {
+  color: white;
+  font-size: 17px;
+  position: fixed;
+  align-items: flex-end;
+  left: 30px;
+  bottom: 60px;
+}
+
+
+#main #section-9 {
+  position: fixed;
+  color: white;
+  right: -100%;
+  height: 100%;
+  top: 0;
+  transition: left 1s;
+}
+
+#main #section-9 .contact-title {
+  align-items: self-start;
+  right: 30px;
+  top: 30px;
+}
+
+#main #section-9 .contact-links {
+  position: fixed;
+  right: 30px;
+  top: 40%;
+}
+
+#main #section-9 .contact-links .contact-about {
+  font-size: 14px;
+}
+
+
+#main #section-9 .contact-links a {
+  color: white;
+  text-decoration: underline;
+}
+
+#main .steps {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+}
+
+#main .steps .step {
+  width: 20px;
+  height: 20px;
+  background: none;
+  color: white;
+  box-shadow: none;
+  border: 1px dotted;
+  cursor: pointer;
+}
+
+#main .steps .step-text {
+  color: white;
+  transition: opacity 1s;
+  margin-left: 30px;
+}

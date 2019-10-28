@@ -1,0 +1,131 @@
+#loader {
+  background: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#loader .img-block {
+  width: 106px;
+  height: 149px;
+  display: block;
+  animation-name: bounce;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.text-block {
+  opacity: 0;
+  animation-name: title-zoom-and-move;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  width: 65px;
+  height: 18px;
+  overflow: hidden;
+}
+
+#loader .img-block>img {
+  animation: bounce-in 0.3s 1 linear;
+}
+
+
+.padawan-text {
+  opacity: 0;
+  display: inline-block;
+  animation-name: right-move-in;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.mark-text {
+  display: inline-block;
+  animation-name: disappear;
+  animation-delay: 0.6s;
+  animation-iteration-count: 1;
+  animation-duration: 0.1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes title-zoom-and-move {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  50% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+
+  90% {
+    transform: scale(1, 1);
+    opacity: 1;
+    width: 65px;
+  }
+
+  100% {
+    width: 185px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes right-move-in {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0, 0) translateY(-200px);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
